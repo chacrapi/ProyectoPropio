@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamefy</title>
+    <link rel="stylesheet" href="css/mystyle.css"> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-grid">
+
+        <header class="top-bar">
+            <div class="logo-area">
+                <span class="logo-icon">🎮</span> 
+                <span class="logo-text">Gamefy</span>
+            </div>
+
+            <div class="search-area">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="search-input" placeholder="¿Qué quieres jugar hoy?">
+                </div>
+            </div>
+
+            <div class="auth-area">
+                <a href="#" class="nav-link">Registrarse</a>
+                <a href="#" class="nav-link btn-login">Iniciar Sesión</a>
+            </div>
+        </header>
+
+        <nav class="sidebar">
+            <ul class="nav-menu">
+    <li class="active" onclick="cargarVistaInicio()">
+        <span class="icon">🏠</span> <span>Inicio</span>
+    </li>
+    <li onclick="cargarVistaTendencias()">
+        <span class="icon">🔥</span> <span>Tendencias</span>
+    </li>
+    </ul>
+
+            <div class="divider"></div>
+
+            <div class="filters-section">
+                <div class="filters-header" onclick="toggleFiltros()">
+                    <h3>🏷️ ETIQUETAS</h3>
+                    <span id="filter-arrow">▼</span>
+                </div>
+                
+                <div id="filter-container" class="filter-tags-container">
+                    </div>
+                
+                <button id="btn-limpiar-filtros" style="display:none;">Limpiar X</button>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="library-section">
+                <div class="library-header">
+                    <h3>TU BIBLIOTECA</h3>
+                    <button class="btn-add-list" onclick="crearNuevaLista()" title="Crear nueva lista">+</button>
+                </div>
+                <ul class="playlist-list"></ul>
+            </div>
+        </nav>
+
+        <main class="main-view">
+            <div id="content-area">
+                </div> 
+
+            <footer class="main-footer">
+                <div class="footer-cols">
+                    <div class="col">
+                        <h4>Empresa</h4>
+                        <a href="#">Acerca de</a>
+                        <a href="#">Empleo</a>
+                    </div>
+                    <div class="col">
+                        <h4>Comunidades</h4>
+                        <a href="#">Para Desarrolladores</a>
+                        <a href="#">Marcas</a>
+                    </div>
+                    <div class="col">
+                        <h4>Enlaces Útiles</h4>
+                        <a href="#">Ayuda</a>
+                        <a href="#">App Gratis</a>
+                    </div>
+                </div>
+                <div class="footer-legal">
+                    <p>&copy; 2026 Gamefy. Hecho con ❤️ y código.</p>
+                    <p>Contacto: soy@gamefy.com</p>
+                </div>
+            </footer>
+        </main>
+
+    </div> 
+
+    <script src="database.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
